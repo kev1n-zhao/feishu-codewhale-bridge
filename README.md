@@ -2,6 +2,8 @@
 
 A lightweight bot that bridges Feishu / Lark messenger with your local Codewhale CLI. Run one command, scan a QR code to bind a Lark app, and talk to Codewhale from chat — read screenshots, edit code, anything you'd do at the terminal.
 
+Thanks to the inspiration from https://github.com/zarazhangrui/feishu-claude-code-bridge
+
 [中文 README](./README.zh.md)
 
 ## What it does
