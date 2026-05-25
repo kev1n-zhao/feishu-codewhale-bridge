@@ -2,6 +2,8 @@
 
 把飞书 / Lark 消息和本地 Codewhale CLI 打通的轻量 bot。一条命令起服务，扫码绑应用，在飞书里和 Codewhale 对话、让它读图 / 改代码。
 
+感谢 https://github.com/zarazhangrui/feishu-claude-code-bridge 的启发。
+
 [English README](./README.md)
 
 ## 功能
