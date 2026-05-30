@@ -2,9 +2,11 @@
 
 把飞书 / Lark 和本地 [Codewhale](https://github.com/Hmbown/CodeWhale) CLI 编程 agent 打通的轻量 bot。一条命令起服务，扫码绑应用，在飞书里直接和 AI 编程 agent 对话——改代码、读文件、跑命令，全在聊天里。
 
-```
-飞书/Lark App ←WebSocket→ lark-codewhale-bridge → codewhale exec --auto
-```
+
+感谢 https://github.com/zarazhangrui/feishu-claude-code-bridge 的启发。
+
+[English README](./README.md)
+
 
 ## 前置要求
 

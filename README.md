@@ -2,9 +2,23 @@
 
 Bridge Feishu / Lark messenger with your local [Codewhale](https://github.com/Hmbown/CodeWhale) CLI coding agent. Run the bot, scan a QR code, and talk to an AI coding agent directly from chat — it can read files, edit code, run commands, and maintain session context across conversations.
 
-```
-Feishu/Lark App ←WebSocket→ lark-codewhale-bridge → codewhale exec --auto
-```
+
+Thanks to the inspiration from https://github.com/zarazhangrui/feishu-claude-code-bridge
+
+[中文 README](./README.zh.md)
+
+## What it does
+
+- Forwards Feishu / Lark messages (DM directly, or `@bot` in a group) to your local `codewhale` CLI, running in a working directory you control.
+- **Streaming card**: Codewhale's text and tool calls update on a single Lark card in real time — no waiting for the final reply.
+- **Project + thread sessions**: one Feishu chat owns one project cwd; each thread/topic gets its own Codewhale session.
+- **Preempt + batch**: a new message interrupts the running run; rapid-fire messages get coalesced into one request.
+- **Multiple workspaces**: `/ws` switches between named project directories, with sessions tracked per workspace.
+- **Images and files**: send them to the bot directly — Codewhale reads the locally downloaded paths.
+- **Rich Lark output**: with bound `lark-cli`, Codewhale can send rich text, tables, images/files, interactive cards, and Docx links back to the current chat/thread.
+- **Interactive cards**: `/help`, `/ws list`, `/status` return cards with buttons you can click; Codewhale-generated cards can route button clicks back into the same session.
+- **Feishu docs workflow**: `/doc <request>` and `/spec <request>` ask Codewhale to create/update a Feishu Docx and return the link.
+
 
 ## Prerequisites
 
