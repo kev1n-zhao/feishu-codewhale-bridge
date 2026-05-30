@@ -20,8 +20,8 @@ import { runStart } from './commands/start';
 const program = new Command();
 
 program
-  .name('lark-codewhale-bridge')
-  .description('Bridge Feishu/Lark messenger with local CLI coding agents')
+  .name('lark-to-codewhale')
+  .description('Connect Feishu/Lark messenger to local CLI coding agents')
   .version(pkg.version, '-v, --version');
 
 // === process-level commands (work directly on bridge processes) ===

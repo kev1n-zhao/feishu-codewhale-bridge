@@ -1,6 +1,6 @@
-# lark-codewhale-bridge
+# lark-to-codewhale
 
-Bridge Feishu / Lark messenger with your local [Codewhale](https://github.com/Hmbown/CodeWhale) CLI coding agent. Run the bot, scan a QR code, and talk to an AI coding agent directly from chat — it can read files, edit code, run commands, and maintain session context across conversations.
+Connect Feishu / Lark messenger to your local [Codewhale](https://github.com/Hmbown/CodeWhale) CLI coding agent. Run the bot, scan a QR code, and talk to an AI coding agent directly from chat — it can read files, edit code, run commands, and maintain session context across conversations.
 
 
 Thanks to the inspiration from https://github.com/zarazhangrui/feishu-claude-code-bridge
@@ -29,15 +29,15 @@ Thanks to the inspiration from https://github.com/zarazhangrui/feishu-claude-cod
 ## Install
 
 ```bash
-npm install -g lark-codewhale-bridge
+npm install -g lark-to-codewhale
 # or
-pnpm add -g lark-codewhale-bridge
+pnpm add -g lark-to-codewhale
 ```
 
 ## Quick start
 
 ```bash
-lark-codewhale-bridge run
+lark-to-codewhale run
 ```
 
 First launch detects no app credentials and opens a QR-code wizard:
@@ -78,32 +78,32 @@ The bot is now running. DM it or add it to a group and `@bot` to start chatting.
 
 | Command | Description |
 |---------|-------------|
-| `lark-codewhale-bridge run` | Run the bot in foreground |
-| `lark-codewhale-bridge run -c <path>` | Run with custom config path |
-| `lark-codewhale-bridge run --skip-check-lark-cli` | Skip lark-cli preflight |
-| `lark-codewhale-bridge ps` | List running bridge processes |
-| `lark-codewhale-bridge kill <id\|#>` | Kill a bridge process |
+| `lark-to-codewhale run` | Run the bot in foreground |
+| `lark-to-codewhale run -c <path>` | Run with custom config path |
+| `lark-to-codewhale run --skip-check-lark-cli` | Skip lark-cli preflight |
+| `lark-to-codewhale ps` | List running bridge processes |
+| `lark-to-codewhale kill <id\|#>` | Kill a bridge process |
 
 **Service-level (OS daemon):** supports macOS (launchd), Linux (systemd), Windows (Task Scheduler).
 
 ```bash
 # Install globally first
-npm install -g lark-codewhale-bridge
+npm install -g lark-to-codewhale
 
-lark-codewhale-bridge start       # Install & start daemon
-lark-codewhale-bridge stop        # Stop daemon
-lark-codewhale-bridge restart     # Restart daemon
-lark-codewhale-bridge status      # Show daemon status
-lark-codewhale-bridge unregister  # Remove daemon service
+lark-to-codewhale start       # Install & start daemon
+lark-to-codewhale stop        # Stop daemon
+lark-to-codewhale restart     # Restart daemon
+lark-to-codewhale status      # Show daemon status
+lark-to-codewhale unregister  # Remove daemon service
 ```
 
 **Secrets management:**
 
 ```bash
-lark-codewhale-bridge secrets set --app-id <id>     # Encrypt and store App Secret
-lark-codewhale-bridge secrets get                   # Exec-provider protocol (for lark-cli)
-lark-codewhale-bridge secrets list                  # List stored secret IDs
-lark-codewhale-bridge secrets remove --app-id <id>  # Remove a stored secret
+lark-to-codewhale secrets set --app-id <id>     # Encrypt and store App Secret
+lark-to-codewhale secrets get                   # Exec-provider protocol (for lark-cli)
+lark-to-codewhale secrets list                  # List stored secret IDs
+lark-to-codewhale secrets remove --app-id <id>  # Remove a stored secret
 ```
 
 ## Configuration

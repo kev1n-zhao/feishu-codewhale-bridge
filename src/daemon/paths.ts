@@ -7,7 +7,7 @@ import { paths } from '../config/paths';
  * unit name. Single-instance for now; if we ever support multiple bots
  * per machine the suffix can grow `.{appid}` without breaking installs.
  */
-export const SERVICE_NAME = 'lark-codewhale-bridge.bot';
+export const SERVICE_NAME = 'lark-to-codewhale.bot';
 
 // === macOS launchd ===
 
@@ -42,7 +42,7 @@ export function systemdUnitPath(): string {
  * `LarkCodewhaleBridge\Bot` would create a Bot task under a LarkCodewhaleBridge
  * folder. We keep it flat for now.
  */
-export const WINDOWS_TASK_NAME = 'LarkCodewhaleBridge.Bot';
+export const WINDOWS_TASK_NAME = 'LarkToCodewhale.Bot';
 
 /**
  * The wrapper .cmd script schtasks invokes. schtasks `/TR` accepts a

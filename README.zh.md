@@ -1,4 +1,4 @@
-# lark-codewhale-bridge
+# lark-to-codewhale
 
 把飞书 / Lark 和本地 [Codewhale](https://github.com/Hmbown/CodeWhale) CLI 编程 agent 打通的轻量 bot。一条命令起服务，扫码绑应用，在飞书里直接和 AI 编程 agent 对话——改代码、读文件、跑命令，全在聊天里。
 
@@ -17,15 +17,15 @@
 ## 安装
 
 ```bash
-npm install -g lark-codewhale-bridge
+npm install -g lark-to-codewhale
 # 或
-pnpm add -g lark-codewhale-bridge
+pnpm add -g lark-to-codewhale
 ```
 
 ## 快速开始
 
 ```bash
-lark-codewhale-bridge run
+lark-to-codewhale run
 ```
 
 首次启动会自动打开二维码注册向导：
@@ -66,32 +66,32 @@ Bot 启动后，直接给它发私信，或在群里 `@bot` 开始对话。
 
 | 命令 | 说明 |
 |------|------|
-| `lark-codewhale-bridge run` | 前台启动 bot |
-| `lark-codewhale-bridge run -c <路径>` | 使用自定义配置 |
-| `lark-codewhale-bridge run --skip-check-lark-cli` | 跳过 lark-cli 检查 |
-| `lark-codewhale-bridge ps` | 列出运行中的 bridge 进程 |
-| `lark-codewhale-bridge kill <id\|#>` | 杀掉进程 |
+| `lark-to-codewhale run` | 前台启动 bot |
+| `lark-to-codewhale run -c <路径>` | 使用自定义配置 |
+| `lark-to-codewhale run --skip-check-lark-cli` | 跳过 lark-cli 检查 |
+| `lark-to-codewhale ps` | 列出运行中的 bridge 进程 |
+| `lark-to-codewhale kill <id\|#>` | 杀掉进程 |
 
 **后台 daemon 服务：** 支持 macOS (launchd)、Linux (systemd)、Windows (Task Scheduler)。
 
 ```bash
 # 先全局安装
-npm install -g lark-codewhale-bridge
+npm install -g lark-to-codewhale
 
-lark-codewhale-bridge start        # 安装并启动后台服务
-lark-codewhale-bridge stop         # 停止
-lark-codewhale-bridge restart      # 重启
-lark-codewhale-bridge status       # 查看状态
-lark-codewhale-bridge unregister   # 移除服务
+lark-to-codewhale start        # 安装并启动后台服务
+lark-to-codewhale stop         # 停止
+lark-to-codewhale restart      # 重启
+lark-to-codewhale status       # 查看状态
+lark-to-codewhale unregister   # 移除服务
 ```
 
 **凭据管理：**
 
 ```bash
-lark-codewhale-bridge secrets set --app-id <id>      # 加密存储 App Secret
-lark-codewhale-bridge secrets get                    # exec-provider 协议（供 lark-cli 使用）
-lark-codewhale-bridge secrets list                   # 列出已存储的 secret ID
-lark-codewhale-bridge secrets remove --app-id <id>   # 删除存储的 secret
+lark-to-codewhale secrets set --app-id <id>      # 加密存储 App Secret
+lark-to-codewhale secrets get                    # exec-provider 协议（供 lark-cli 使用）
+lark-to-codewhale secrets list                   # 列出已存储的 secret ID
+lark-to-codewhale secrets remove --app-id <id>   # 删除存储的 secret
 ```
 
 ## 配置

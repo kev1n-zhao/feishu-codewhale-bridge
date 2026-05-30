@@ -1,10 +1,10 @@
 {
-  "name": "lark-codewhale-bridge",
+  "name": "lark-to-codewhale",
   "version": "0.1.0",
-  "description": "Bridge Feishu/Lark messenger with local Codewhale CLI coding agent",
+  "description": "Connect Feishu/Lark messenger to local Codewhale CLI coding agent",
   "type": "module",
   "bin": {
-    "lark-codewhale-bridge": "./bin/lark-codewhale-bridge.mjs"
+    "lark-to-codewhale": "./bin/lark-to-codewhale.mjs"
   },
   "exports": {
     ".": {
@@ -55,8 +55,7 @@
     "codewhale",
     "deepseek",
     "cli",
-    "channel",
-    "bridge"
+    "channel"
   ],
   "license": "MIT"
 }
